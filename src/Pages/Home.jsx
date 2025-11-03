@@ -1,12 +1,17 @@
 import React from 'react'
-import SideNavbar from '../components/SideNavbar'
 import Profile from '../components/Profile'
+import Fees from '../components/Fees'
+import ExamResult from '../components/ExamResult'
+import ExamForm from '../components/ExamForm'
 
 function Home() {
   return (
         <>
-            <SideNavbar/>
+       
             <Profile/>
+            <Fees/>
+            <ExamForm/>
+            <ExamResult/>
         </>
   )
 }
