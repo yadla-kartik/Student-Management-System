@@ -1,35 +1,59 @@
 import React from 'react'
+import { Mail, Lock } from 'lucide-react';
 
 function Login() {
   return (
     <>
-        <div className='w-full h-screen bg-zinc-200 flex justify-center items-center'>
-            <div className='p-7 w-4/12 h-50 rounded-lg bg-white border-b border-gray-300'>
-                <h3 className='font-bold text-xl text-zinc-700'>LOGIN</h3>
-                
-                <div className="mt-5">
-                    <form action="" className='flex flex-col justify-evenly gap-2'>
-                        <div>
-                            <label htmlFor="" className='text-zinc-600'>User Id</label>
-                            <div className='flex mt-1.5 items-center border border-gray-400 rounded-md'>
-                                <div className='w-5 h-8 border-r border-zinc-400 bg-zinc-200 rounded-l-md'></div>
-                                <input className='p-1 px-2 text-sm border-none placeholder-zinc-600 ' type="text" placeholder='User Id' />
-                            </div>
-                        </div>
-                        <div>
-                            <label htmlFor="" className='text-zinc-600'>Password</label>
-                            <div className='flex mt-1.5 items-center border border-gray-400 rounded-md'>
-                                <div className='w-5 h-8 border-r border-zinc-400 bg-zinc-200 rounded-l-md'></div>
-                                <input className=' border-none text-sm p-1 px-2 placeholder-zinc-600' type="text" placeholder='Enter your Password' />
-                            </div>
-                        </div>
-                        <button className='w-full p-1 text-sm bg-indigo-700 text-white rounded-md mt-2'>Log In</button>
-                    </form>
-                </div>
+    <div className="w-full min-h-screen bg-gray-100 flex items-center justify-center p-4">
+      <div className="w-5/12 bg-white rounded-lg shadow-lg p-8">
+        <h1 className="text-3xl font-bold text-gray-800 mb-8">LOGIN</h1>
+        
+        <div>
+          {/* User Id Field */}
+          <div className="mb-6">
+            <label className="block text-gray-600 text-sm mb-2">
+              User Id
+            </label>
+            <div className="relative">
+              <div className="absolute inset-y-0 left-0 p-3 bg-gray-200 flex items-center pointer-events-none rounded-lg border-r border-gray-300">
+                <Mail className="h-4 w-4 text-gray-700" />
+              </div>
+              <input
+                type="text"
+                placeholder="User Id"
+                className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
             </div>
+          </div>
+
+          {/* Password Field */}
+          <div className="mb-6">
+            <label className="block text-gray-600 text-sm mb-2">
+              Password
+            </label>
+            <div className="relative">
+              <div className="absolute inset-y-0 left-0 p-3 bg-gray-200 flex items-center pointer-events-none rounded-lg border-r border-gray-300">
+                <Lock className="h-4 w-4 text-gray-700" />
+              </div>
+              <input
+                type="password"
+                placeholder="Enter your password"
+                className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+            </div>
+          </div>
+
+          {/* Login Button */}
+          <button
+            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 rounded-lg transition duration-200"
+            >
+            Log In
+          </button>
         </div>
+      </div>
+    </div>
     </>
-  )
+  );
 }
 
 export default Login
